@@ -1,0 +1,24 @@
+var Divider = React.creatClass({
+	getIsComplete:function(){
+		 return 'is-complete'
+		},
+	handleClick:function(event){
+
+		},
+	render:function(){
+		var styles={
+			border:1px solid #c2c2c2;
+		};
+		return (<div style={style} onClick={this.handleClick} className={this.getIsComplete()}>
+			<h2>{this.props.children}</h2>
+			</div>)
+	}
+})
+
+//使用
+<Divider>i'm Divider</Divider>
+
+//解析后
+<div style="border:1px solid #c2c2c2" onClick="handleClick()" class="is-complete">
+	<h2>i'm Divider</h2>
+</div>
